@@ -26,26 +26,53 @@
     </style>
   </head>
   <body
-    class="h-screen max-w-full mx-auto md:mx-8 lg:mx-12 xl:mx-16 flex justify-center items-center"
+    class="h-screen max-w-full flex justify-center items-center font-custom-sans bg-custom-cream"
   >
-    <div class="border-4 border-red-400 w-1/2">
-      <div class="border-4">
-        <h3>My balance</h3>
-        <p>$921.48</p>
-      </div>
-      <div class="border-4 border-yellow-400">
-        <div>Spending - Last 7 days</div>
+    <!--content wrapper-->
+    <div class="min-w-fit m-6 sm:w-1/3">
+      <div
+        class="flex justify-between rounded-xl bg-custom-red mb-4 p-6 font-custom-sans text-custom-cream"
+      >
         <div>
-          <canvas id="myChart"></canvas>
+          <h3 class="text-lg font-normal">My balance</h3>
+          <p class="text-3xl font-bold">$921.48</p>
+        </div>
+        <img src="../images/logo.svg" />
+      </div>
+      <div class="p-6 bg-white rounded-xl">
+        <div class="text-2xl lg:text-3xl font-bold text-custom-dark-brown">
+          Spending - Last 7 days
+        </div>
+        <!-- chart-->
+        <div class="">
+          <canvas
+            id="myChart"
+            class="my-6 pb-6 border-b-2 border-custom-cream hover:cursor-pointer"
+          ></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
         <script src="../chart1.js"></script>
-        <div>
-          <h3>Total this month</h3>
-          <div>
-            <h1>$478.33</h1>
-            <p>+2.4%</p>
-            <p class="text-blue-500">from last month</p>
+        <!--end chart-->
+        <div class="mb-2">
+          <div class="text-base lg:text-lg text-custom-medium-brown">
+            Total this month
+          </div>
+          <div class="grid grid-rows-2 grid-cols-2">
+            <div
+              class="row-span-2 text-custom-dark-brown text-3xl lg:text-5xl font-bold flex items-center self-stretch"
+            >
+              $478.33
+            </div>
+            <div
+              class="text-base lg:text-lg text-custom-dark-brown font-bold flex justify-end"
+            >
+              +2.4%
+            </div>
+            <div
+              class="text-base lg:text-lg text-custom-medium-brown flex justify-end"
+            >
+              from last month
+            </div>
           </div>
         </div>
       </div>
