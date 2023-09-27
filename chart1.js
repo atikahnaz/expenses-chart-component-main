@@ -1,5 +1,5 @@
 const ctx = document.getElementById("myChart");
-fetch("../data.json")
+fetch("data.json")
   .then((response) => response.json())
   .then((json) => {
     const day = json.map((item) => item.day);
